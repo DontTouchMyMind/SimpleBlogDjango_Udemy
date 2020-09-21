@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+{% load static %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -70,7 +71,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-link" href="#">About Me</a>
+          <a class="nav-link" href="{% static 'AboutMe.txt' %}">About Me</a>
           <a class="nav-link" href="#">Facebook</a>
           <a class="nav-link" href="#">Blog</a>
         </div>
@@ -87,6 +88,7 @@
       <p>
         <a href="mailto:tobigface@gmail.com" class="btn btn-primary my-2">Main me</a>
       </p>
+      <img src="{% static 'photo.jpg' %}" height="300", width="300" class="img-fluid">
     </div>
   </section>
 
