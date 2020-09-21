@@ -9,3 +9,6 @@ class Post(models.Model):
     date = models.DateTimeField(default=datetime.now, blank=True)
     text = models.TextField()
     image = models.ImageField(upload_to='post_images/')
+
+    def get_summary(self):
+        return self.text[:70]
