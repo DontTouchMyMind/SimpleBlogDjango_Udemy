@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Album example · Bootstrap</title>
+    <title>My Blog</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
@@ -64,14 +64,14 @@
     </div>
   </div>
     <nav class="navbar navbar-expand-lg navbar-light font-italic" style="background-color: #e9967a">
-      <a class="navbar-brand" href="#">My Blog</a>
+      <a class="navbar-brand" href="{% url 'home' %}">My Blog</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-link" href="#">About Me</a>
-          <a class="nav-link" href="#">Facebook</a>
+          <a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/">Google</a>
           <a class="nav-link active" href="#">Blog</a>
         </div>
       </div>
@@ -81,7 +81,7 @@
 <main role="main">
     <h1 class="pt-5 pb-5">Recent Posts</h1>
     {% for post in posts.all %}
-        <a href=""><h2>{{ post.title }}</h2></a>
+        <a href="{% url 'specific_post' post.id %}"><h2>{{ post.title }}</h2></a>
         <br>
         <img src="{{ post.image.url }}" height="300", width="300" class="img-fluid">
         <br>
